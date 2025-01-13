@@ -1,10 +1,16 @@
-import React from "react";
-import { Box } from "@chakra-ui/react";
+import React, { ReactElement } from "react";
+import { Box, ColorPalette } from "@chakra-ui/react";
 
-export default function ContentLayout({children, background}) {
+interface ContentLayoutInterface {
+	children: ReactElement,
+  	background: ColorPalette,
+	height?: string
+}
+
+export default function ContentLayout(props:ContentLayoutInterface) {
   return (
-    <Box display="flex" width="100%" height="100vh" background={background}>
-		{children}
+    <Box display="flex" width="100%" height={props.height? props.height : "100vh"} background={props.background}>
+      {props.children}
     </Box>
   );
 }
