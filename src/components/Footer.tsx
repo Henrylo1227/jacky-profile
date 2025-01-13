@@ -34,23 +34,6 @@ const SocialMediaGroup = () => {
   );
 };
 
-// const Footer = () => {
-//   return (
-//     <Box
-//       as="footer"
-//       display="grid"
-//       width="100%"
-//       height="100"
-//       padding="4"
-//       background="grey"
-//       gridTemplateColumns="repeat(3, 1)"
-//     >
-//       <FooterContent />
-//       <SocialMediaGroup />
-//     </Box>
-//   );
-// };
-
 const Footer = () => {
   return (
     <VStack
