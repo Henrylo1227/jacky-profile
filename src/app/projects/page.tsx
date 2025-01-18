@@ -5,7 +5,7 @@ import ContentLayout from "../../components/ContentLayout";
 export default function ProjectsHome() {
   return (
     <Box>
-      <ContentLayout background="red.700">
+      <ContentLayout  background="red.700">
         <Text>Project</Text>
       </ContentLayout>
       <ContentLayout background="green.700">

@@ -1,9 +1,9 @@
 import React from "react";
-import { VStack, Text, List, Icon } from "@chakra-ui/react";
+import { VStack, HStack, Text, List, Icon } from "@chakra-ui/react";
 import { FaYoutube, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 // configurations
-const footerText = "footer";
+const footerText = "Jacky.L's Profile";
 const copyrightText = "© 2025 Tsz Yip Jacky LO. All right reserved.";
 const socialMediaList = [
   { label: "LinkedIn", icon: <FaLinkedin />, href: "https://www.linkedin.com" },
@@ -16,7 +16,8 @@ const SocialMediaGroup = () => {
     <List.Root
       display="flex"
       flexDir="row"
-      gap="4"
+      gap="3"
+      paddingX="5"
       gridColumnStart="3"
       gridColumnEnd="4"
       justifySelf="right"
@@ -24,7 +25,7 @@ const SocialMediaGroup = () => {
       {socialMediaList.map((x) => (
         <List.Item key={x.label} justifyContent="center" alignContent="center">
           <a href={x.href}>
-            <Icon asChild boxSize="6">
+            <Icon asChild boxSize="5">
               {x.icon}
             </Icon>
           </a>
@@ -36,15 +37,13 @@ const SocialMediaGroup = () => {
 
 const Footer = () => {
   return (
-    <VStack
-      as="footer"
-      width="100%"
-      background="grey"
-    >
-      <Text textStyle="md" fontWeight="bolder">
-        {footerText}
-      </Text>
-      <SocialMediaGroup />
+    <VStack as="footer" width="100%" background="grey">
+      <HStack paddingTop="3">
+        <Text textStyle="md" fontWeight="bolder">
+          {footerText}
+        </Text>
+        <SocialMediaGroup />
+      </HStack>
       <Text textStyle="xs">{copyrightText}</Text>
     </VStack>
   );

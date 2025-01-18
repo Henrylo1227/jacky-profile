@@ -1,19 +1,13 @@
 import React from "react";
-import { Box, Text } from "@chakra-ui/react";
-import ContentLayout from "../components/ContentLayout";
+import { Box } from "@chakra-ui/react";
+import WelcomePanel from "./WelcomePanel";
+import ProjectOverview from "./ProjectOverview";
 
 export default function Home() {
   return (
     <Box>
-      <ContentLayout background="red">
-        <Text>Home</Text>
-      </ContentLayout>
-      <ContentLayout background="green">
-        <Text>Home2</Text>
-      </ContentLayout>
-      <ContentLayout background="blue">
-        <Text>Home3</Text>
-      </ContentLayout>
+		<WelcomePanel/>
+		<ProjectOverview/>
     </Box>
   );
 }
