@@ -1,34 +1,34 @@
-"use client";
 import React from "react";
 import { Box, Text } from "@chakra-ui/react";
 import ContentLayout from "../components/ContentLayout";
 import Carousel from "../components/Carousel";
+import { PROJECT_PATHS } from "../paths"
 
 export const PROJECT_OVERVIEW_ID = "project-overview"
 const contentList = [
   {
-    key: "project card key",
-    name: "project name 0",
+    key: "Fashionista",
+    name: "Fashionista",
     imagePath: "imagePath",
     description: "i am some description",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
-    projectPath: "",
+    projectPath: PROJECT_PATHS.FASHIONISTA,
   },
   {
-    key: "project card key",
-    name: "project name 1",
+    key: "HUD - Campus Project",
+    name: "HUD - Campus Project",
     imagePath: "imagePath",
     description: "i am some description",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
-    projectPath: "",
+    projectPath: PROJECT_PATHS.CAMPUS_PROJECT,
   },
   {
-    key: "project card key",
-    name: "project name 2",
+    key: "Culture of Hub",
+    name: "Culture of Hub",
     imagePath: "imagePath",
     description: "i am some description",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
-    projectPath: "",
+    projectPath: PROJECT_PATHS.CULTURE_OF_HUB,
   },
 ];
 

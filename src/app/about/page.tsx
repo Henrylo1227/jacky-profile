@@ -1,6 +1,6 @@
 import React from "react"
 import { Text } from "@chakra-ui/react"
-import ContentLayout from "../../components/ContentLayout";
+import ContentLayout from "@components/ContentLayout";
 
 export default function About() {
   return (

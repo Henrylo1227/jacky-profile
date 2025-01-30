@@ -1,8 +1,8 @@
 "use client"
 import React from "react";
 import { Button, Box, Grid, GridItem, Text, } from "@chakra-ui/react";
-import ContentLayout from "../components/ContentLayout";
-import { scrollToSection } from "../utils";
+import ContentLayout from "@components/ContentLayout";
+import { scrollToSection } from "@utils/uiUtils";
 import { PROJECT_OVERVIEW_ID } from "./ProjectOverview"
 
 const welcomeText = "Please enjoy my project! Hope they bring you inspiration.";

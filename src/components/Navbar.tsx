@@ -19,7 +19,11 @@ const Menu = () => {
     <List.Root display="flex" flexDir="row" paddingX="10">
       {navPageList.map((x) => (
         <List.Item key={x.label}>
-          <Button asChild background="transparent" display={{ base: "none", md: "flex" }}>
+          <Button
+            asChild
+            background="transparent"
+            display={{ base: "none", md: "flex" }}
+          >
             <a href={x.href}>{x.label}</a>
           </Button>
           <IconButton
@@ -38,6 +42,7 @@ const Menu = () => {
 export default function Navbar() {
   return (
     <Box
+      zIndex="docked"
       display="flex"
       width="100%"
       height="5vh"

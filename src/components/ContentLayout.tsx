@@ -13,7 +13,7 @@ export default function ContentLayout(props: ContentLayoutInterface) {
       asChild
       display="flex"
       width="100%"
-      height={props.height ? props.height : {base: "90vh", sm: "100vh"}}
+      minHeight={props.height ? props.height : {base: "90vh", sm: "100vh"}}
       background={props.background}
     >
       {props.children}

@@ -1,19 +1,27 @@
-import React from "react"
+import React from "react";
 import { Box, Text } from "@chakra-ui/react";
-import ContentLayout from "../../components/ContentLayout";
+import ContentLayout from "@components/ContentLayout";
+
+type ProjectInfo = {
+  name: string;
+  description: string;
+  tags?: string[];
+};
+
+const projectInfoList: ProjectInfo[] = [
+  { name: "Fashionista", description: "bruhh bruhhh bruhhhhh" },
+  { name: "HUD - Campus Project", description: "bruhh bruhhh bruhhhhh" },
+  { name: "Culture of Hub", description: "bruhh bruhhh bruhhhhh" },
+];
 
 export default function ProjectsHome() {
   return (
     <Box>
-      <ContentLayout  background="red.700">
-        <Text>Project</Text>
-      </ContentLayout>
-      <ContentLayout background="green.700">
-        <Text>Project2</Text>
-      </ContentLayout>
-      <ContentLayout background="blue.700">
-        <Text>Project3</Text>
-      </ContentLayout>
+      {projectInfoList.map((x,i) => (
+        <ContentLayout key={i} background="red.700">
+          <Text>{x.name}</Text>
+        </ContentLayout>
+      ))}
     </Box>
   );
 }
