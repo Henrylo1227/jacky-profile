@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Button, IconButton } from "@chakra-ui/react";
+import { Box, Text, Button, IconButton, Link } from "@chakra-ui/react";
 import { List } from "@chakra-ui/react";
 import { AiOutlineHome } from "react-icons/ai";
 import { FiInfo } from "react-icons/fi";
@@ -16,7 +16,7 @@ const navPageList = [
 
 const Menu = () => {
   return (
-    <List.Root display="flex" flexDir="row" paddingX="10">
+    <List.Root textStyle="navbar" display="flex" flexDir="row" paddingX="10">
       {navPageList.map((x) => (
         <List.Item key={x.label}>
           <Button
@@ -24,14 +24,17 @@ const Menu = () => {
             background="transparent"
             display={{ base: "none", md: "flex" }}
           >
-            <a href={x.href}>{x.label}</a>
+            <Link textStyle="navbar" href={x.href}>
+              <Text>{x.label}</Text>
+            </Link>
           </Button>
           <IconButton
+            asChild
             display={{ base: "flex", md: "none" }}
             size="lg"
             background="transparent"
           >
-            <a href={x.href}>{x.icon}</a>
+            <Link href={x.href}>{x.icon}</Link>
           </IconButton>
         </List.Item>
       ))}
@@ -53,16 +56,17 @@ export default function Navbar() {
       justifyContent="space-between"
       alignItems="center"
     >
-      <Text
+      <Link
         display={{ base: "none", md: "flex" }}
         paddingX="10"
         textStyle="2xl"
+        href={navPageList[0].href}
       >
-        <a href={navPageList[0].href}>{navbarTitle}</a>
-      </Text>
-      <Text display={{ md: "none" }} paddingX="10" textStyle="monoNar">
-        <a href={navPageList[0].href}>{navbarTitleShort}</a>
-      </Text>
+        {navbarTitle}
+      </Link>
+      <Link display={{ md: "none" }} paddingX="10" href={navPageList[0].href}>
+        {navbarTitleShort}
+      </Link>
       <Menu />
     </Box>
   );
