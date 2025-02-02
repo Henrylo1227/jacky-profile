@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Text } from "@chakra-ui/react";
-import ContentLayout from "../components/ContentLayout";
-import Carousel from "../components/Carousel";
+import ContentLayout from "@components/ContentLayout";
+import Carousel from "@components/Carousel";
 import { PROJECT_PATHS } from "../paths"
 
 export const PROJECT_OVERVIEW_ID = "project-overview"
