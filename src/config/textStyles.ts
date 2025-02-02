@@ -2,13 +2,13 @@ import { defineTextStyles } from "@chakra-ui/react"
 
 export const textStyles = defineTextStyles({
   navbar: {
-    description: "mono for Nav bar",
+    description: "for Nav bar",
     value: {
-      fontFamily: "cursive",
+      fontFamily: "sans-serif",
       fontWeight: "500",
-      fontSize: "16px",
-      lineHeight: "24",
-      letterSpacing: "0",
+      fontSize: "2xl",
+      lineHeight: "tall",
+      letterSpacing: "2",
       textDecoration: "None",
       textTransform: "None",
     },
@@ -18,8 +18,8 @@ export const textStyles = defineTextStyles({
     value: {
       fontFamily: "sans-serif",
       fontWeight: "500",
-      fontSize: "24px",
-      lineHeight: "32",
+      fontSize: "3xl",
+      lineHeight: "tall",
       letterSpacing: "2",
       textDecoration: "None",
       textTransform: "None",
