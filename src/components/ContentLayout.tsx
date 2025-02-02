@@ -3,8 +3,14 @@ import { Box } from "@chakra-ui/react";
 
 interface ContentLayoutInterface {
   children: ReactElement;
-  background: string;
+  background?: string;
   height?: string;
+}
+
+const DEFAULT_STYLE = {
+	background: "secondary",
+	borderColor: "negator",
+	borderTopWidth: "2rem"
 }
 
 export default function ContentLayout(props: ContentLayoutInterface) {
@@ -13,10 +19,12 @@ export default function ContentLayout(props: ContentLayoutInterface) {
       asChild
       display="flex"
       width="100%"
-      minHeight={props.height ? props.height : {base: "90vh", sm: "100vh"}}
-      background={props.background}
+      minHeight={props.height ? props.height : { base: "90vh", sm: "100vh" }}
+      background={props.background ? props.background :DEFAULT_STYLE.background}
+	  borderColor={DEFAULT_STYLE.borderColor}
+	  borderTopWidth={DEFAULT_STYLE.borderTopWidth}
     >
       {props.children}
     </Box>
-  )
+  );
 }

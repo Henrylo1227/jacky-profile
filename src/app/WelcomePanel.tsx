@@ -9,7 +9,7 @@ const welcomeText = "Please enjoy my project! Hope they bring you inspiration.";
 
 export default function WelcomePanel() {
   return (
-    <ContentLayout background="black">
+    <ContentLayout >
       <Grid
         templateColumns="repeat(3, 1fr)"
         gap={0}
@@ -20,7 +20,7 @@ export default function WelcomePanel() {
       >
         <GridItem
           colSpan={1}
-          style={{ backgroundColor: "black", border: "2px solid white" }}
+          style={{ backgroundColor: "secondary", border: "2px solid white" }}
           display={{ base: "none", md: "flex" }}
         >
           <Text p="8" textStyle="6xl" alignSelf="start">

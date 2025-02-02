@@ -16,7 +16,7 @@ const navPageList = [
 
 const Menu = () => {
   return (
-    <List.Root textStyle="navbar" display="flex" flexDir="row" paddingX="10">
+    <List.Root display="flex" flexDir="row" paddingX="10">
       {navPageList.map((x) => (
         <List.Item key={x.label}>
           <Button
@@ -49,17 +49,17 @@ export default function Navbar() {
       display="flex"
       width="100%"
       height="5vh"
-      background="black"
+      background="primary"
       border="white"
       borderWidth="thin"
       position="fixed"
       justifyContent="space-between"
+	  textStyle="navbar"
       alignItems="center"
     >
       <Link
         display={{ base: "none", md: "flex" }}
         paddingX="10"
-        textStyle="2xl"
         href={navPageList[0].href}
       >
         {navbarTitle}
