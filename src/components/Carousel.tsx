@@ -25,7 +25,7 @@ const CarouselCard = ({ contentList, showIndex }: CarouselCardProps) => {
 		key={content.key} 
 		background="gold" 
 		width={{base: "80%"}}
-		height={{base: "80%", md: "90%"}}
+		height={{base: "70vh", md: "80vh"}}
 		>
       <Card.Header textStyle="2xl"> {content.name} </Card.Header>
       <Card.Body>

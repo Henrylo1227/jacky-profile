@@ -38,7 +38,6 @@ export default function DescriptionCard({
 	  bg={style.bgColor}
       color={style.textColor}
 	  opacity="0.8"
-	  shawfilter="blur(5px) grayscale(80%)"
 	  shadow="lg"
 	  shadowColor="black"
     >
