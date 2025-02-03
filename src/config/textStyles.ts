@@ -13,12 +13,37 @@ export const textStyles = defineTextStyles({
       textTransform: "None",
     },
   },
-  homePageWelcome: {
-    description: "home page welcome",
+  button: {
+	description: "button",
     value: {
       fontFamily: "sans-serif",
       fontWeight: "500",
       fontSize: "2xl",
+      lineHeight: "tall",
+      letterSpacing: "2",
+      textDecoration: "None",
+      textTransform: "None",
+    },
+  },
+  homePageWelcome: {
+    description: "home page welcome",
+    value: {
+      fontFamily: "Changa One",
+      fontWeight: "400",
+      fontSize: "4xl",
+      fontStyle: "italic",
+      lineHeight: "taller",
+      letterSpacing: "4",
+      textDecoration: "None",
+      textTransform: "None",
+    },
+  },
+  homePageWelcomeContent: {
+    description: "home page welcome",
+    value: {
+      fontFamily: "sans-serif",
+      fontWeight: "400",
+      fontSize: "xl",
       lineHeight: "tall",
       letterSpacing: "2",
       textDecoration: "None",
