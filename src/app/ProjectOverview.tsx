@@ -1,15 +1,15 @@
 import React from "react";
-import { Box, Text } from "@chakra-ui/react";
+import { Text, HStack, VStack } from "@chakra-ui/react";
 import ContentLayout from "@components/ContentLayout";
-import Carousel from "@components/Carousel";
-import { PROJECT_PATHS } from "../paths"
+import { PROJECT_PATHS } from "../paths";
+import WelcomeProjectCard from "@components/WelcomeProjectCard";
 
-export const PROJECT_OVERVIEW_ID = "project-overview"
+export const PROJECT_OVERVIEW_ID = "project-overview";
 const contentList = [
   {
     key: "Fashionista",
     name: "Fashionista",
-    imagePath: "imagePath",
+    imagePath: undefined,
     description: "i am some description",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
     projectPath: PROJECT_PATHS.FASHIONISTA,
@@ -17,7 +17,7 @@ const contentList = [
   {
     key: "HUD - Campus Project",
     name: "HUD - Campus Project",
-    imagePath: "imagePath",
+    imagePath: undefined,
     description: "i am some description",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
     projectPath: PROJECT_PATHS.CAMPUS_PROJECT,
@@ -25,8 +25,8 @@ const contentList = [
   {
     key: "Culture of Hub",
     name: "Culture of Hub",
-    imagePath: "imagePath",
-    description: "i am some description",
+    imagePath: undefined,
+    description: "comming soon",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
     projectPath: PROJECT_PATHS.CULTURE_OF_HUB,
   },
@@ -34,14 +34,11 @@ const contentList = [
 
 export default function ProjectOverview() {
   return (
-    <ContentLayout background="black">
-      <Box
-	  	id={PROJECT_OVERVIEW_ID}
+    <ContentLayout>
+      <VStack
+        id={PROJECT_OVERVIEW_ID}
         display="flex"
         padding="4px"
-        borderStyle="solid"
-        borderColor="white"
-        borderWidth="2xp"
         flexDir="column"
       >
         <Text
@@ -52,8 +49,35 @@ export default function ProjectOverview() {
         >
           Projcects
         </Text>
-        <Carousel contentList={contentList} />
-      </Box>
+        <HStack display={{ base: "none", lg: "flex" }}>
+          {contentList.map((x, index) => (
+            <WelcomeProjectCard
+              key={index}
+              descriptionContent={{
+                id: x.key,
+                title: x.name,
+                subtitle: x.description,
+                imagePath: x.imagePath,
+                projectPath: x.projectPath,
+              }}
+            ></WelcomeProjectCard>
+          ))}
+        </HStack>
+        <VStack display={{ base: "flex", lg: "none" }}>
+          {contentList.map((x, index) => (
+            <WelcomeProjectCard
+              key={index}
+              descriptionContent={{
+                id: x.key,
+                title: x.name,
+                subtitle: x.description,
+                imagePath: x.imagePath,
+                projectPath: x.projectPath,
+              }}
+            ></WelcomeProjectCard>
+          ))}
+        </VStack>
+      </VStack>
     </ContentLayout>
   );
 }
