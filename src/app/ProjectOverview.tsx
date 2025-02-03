@@ -18,7 +18,7 @@ const contentList = [
   {
     key: "HUD - Campus Project",
     name: "HUD - Campus Project",
-    imagePath: "url(https://cdn.discordapp.com/attachments/310075799682416650/1336016825451942039/image.png?ex=67a24621&is=67a0f4a1&hm=9753f59f57678e1a5c5ac9be38b44acc6cc88b56b6d3bc13a15c8cce5dce12dc&)",
+    imagePath: undefined,
     description: "i am some description",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
     projectPath: PROJECT_PATHS.CAMPUS_PROJECT,
@@ -27,8 +27,8 @@ const contentList = [
   {
     key: "Culture of Hub",
     name: "Culture of Hub",
-    imagePath: "url(https://cdn.discordapp.com/attachments/310075799682416650/1336038946500640860/5.jpg?ex=67a25abb&is=67a1093b&hm=e8513e02251e5ed76f120ac9824e4e11e7d85dd1c6726269102b9099582029ce&)",
-    description: "i am not some description",
+    imagePath: undefined,
+    description: "comming soon",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
     projectPath: PROJECT_PATHS.CULTURE_OF_HUB,
 	enablePath: true,
