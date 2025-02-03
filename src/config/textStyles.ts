@@ -62,6 +62,30 @@ export const textStyles = defineTextStyles({
       textTransform: "None",
     },
   },
+  homePageProjectTitle: {
+    description: "home page project overview title",
+    value: {
+      fontFamily: "Changa One",
+      fontWeight: "400",
+      fontSize: "2xl",
+      lineHeight: "tall",
+      letterSpacing: "2",
+      textDecoration: "None",
+      textTransform: "None",
+    },
+  },
+  homePageProjectSubtitle: {
+    description: "home page project overview title",
+    value: {
+      fontFamily: "Changa One",
+      fontWeight: "400",
+      fontSize: "md",
+      lineHeight: "tall",
+      letterSpacing: "2",
+      textDecoration: "None",
+      textTransform: "None",
+    },
+  },
   projectPageTitle: {
     description: "project page project title",
     value: {
