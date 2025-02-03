@@ -19,6 +19,7 @@ export default function ContentLayout(props: ContentLayoutInterface) {
       asChild
       display="flex"
       width="100%"
+	  justifyContent="center"
       minHeight={props.height ? props.height : { base: "90vh", sm: "100vh" }}
       background={props.background ? props.background :DEFAULT_STYLE.background}
 	  borderColor={DEFAULT_STYLE.borderColor}
