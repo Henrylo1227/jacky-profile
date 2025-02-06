@@ -98,4 +98,30 @@ export const textStyles = defineTextStyles({
       textTransform: "None",
     },
   },
+  aboutPageTitle: {
+    description: "about page title",
+    value: {
+      fontFamily: "Changa One",
+      fontWeight: "400",
+      fontSize: "4xl",
+      fontStyle: "italic",
+      lineHeight: "taller",
+      letterSpacing: "4",
+      textDecoration: "None",
+      textTransform: "None",
+    },
+  },
+  aboutPageContent: {
+    description: "about page content",
+    value: {
+      fontFamily: "Changa One",
+      fontWeight: "200",
+      fontSize: "lg",
+      fontStyle: "normal",
+      lineHeight: "taller",
+      letterSpacing: "4",
+      textDecoration: "None",
+      textTransform: "None",
+    },
+  },
 });

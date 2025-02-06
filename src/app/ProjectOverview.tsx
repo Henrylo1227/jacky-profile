@@ -7,28 +7,31 @@ import WelcomeProjectCard from "@components/WelcomeProjectCard";
 export const PROJECT_OVERVIEW_ID = "project-overview";
 const contentList = [
   {
-    key: "Fashionista",
-    name: "Fashionista",
+    key: "Creative Territories",
+    name: "Creative Territories",
     imagePath: undefined,
-    description: "i am some description",
+    description: "Comming soon",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
-    projectPath: PROJECT_PATHS.FASHIONISTA,
+    projectPath: PROJECT_PATHS.CREATIVE_TERRITORIES,
+	enablePath: false,
   },
   {
     key: "HUD - Campus Project",
     name: "HUD - Campus Project",
-    imagePath: undefined,
+    imagePath: "url(https://cdn.discordapp.com/attachments/310075799682416650/1336016825451942039/image.png?ex=67a24621&is=67a0f4a1&hm=9753f59f57678e1a5c5ac9be38b44acc6cc88b56b6d3bc13a15c8cce5dce12dc&)",
     description: "i am some description",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
     projectPath: PROJECT_PATHS.CAMPUS_PROJECT,
+	enablePath: true,
   },
   {
     key: "Culture of Hub",
     name: "Culture of Hub",
-    imagePath: undefined,
-    description: "comming soon",
+    imagePath: "url(https://cdn.discordapp.com/attachments/310075799682416650/1336038946500640860/5.jpg?ex=67a25abb&is=67a1093b&hm=e8513e02251e5ed76f120ac9824e4e11e7d85dd1c6726269102b9099582029ce&)",
+    description: "i am not some description",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
     projectPath: PROJECT_PATHS.CULTURE_OF_HUB,
+	enablePath: true,
   },
 ];
 
@@ -47,7 +50,7 @@ export default function ProjectOverview() {
           textStyle="5xl"
           alignSelf="center"
         >
-          Projcects
+          Projects
         </Text>
         <HStack display={{ base: "none", lg: "flex" }}>
           {contentList.map((x, index) => (
@@ -74,6 +77,7 @@ export default function ProjectOverview() {
                 imagePath: x.imagePath,
                 projectPath: x.projectPath,
               }}
+			  enablePath={x.enablePath}
             ></WelcomeProjectCard>
           ))}
         </VStack>
