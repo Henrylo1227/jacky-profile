@@ -22,7 +22,7 @@ const descriptionList: DescriptionContent[] = [
   },
 ];
 
-export default function ProjectPageFashionista() {
+export default function ProjectPageCreativeTerritories() {
   return (
     <ContentLayout background="red">
       <VStack gap="2vh">

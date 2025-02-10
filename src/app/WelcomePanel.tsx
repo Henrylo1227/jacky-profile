@@ -1,64 +1,48 @@
-"use client"
-import React from "react";
-import { Button, Box, Grid, GridItem, Text, } from "@chakra-ui/react";
+"use client";
 import ContentLayout from "@components/ContentLayout";
+import PrimaryButton from "@components/PrimaryButton";
+import React from "react";
+import { Box, VStack, Text } from "@chakra-ui/react";
+import { PROJECT_OVERVIEW_ID } from "./ProjectOverview";
 import { scrollToSection } from "@utils/uiUtils";
-import { PROJECT_OVERVIEW_ID } from "./ProjectOverview"
 
-const welcomeText = "Please enjoy my project! Hope they bring you inspiration.";
+const welcomeTextList = [
+  "I'm Jacky Lo, An Interior Design student from the University of Huddersfield.",
+  "Sharpening my skills with various industrial level softwares and borden my knowledge from my continuous projects.",
+];
 
 export default function WelcomePanel() {
   return (
-    <ContentLayout >
-      <Grid
-        templateColumns="repeat(3, 1fr)"
-        gap={0}
-        paddingY="10"
-        paddingX="5"
-        display="flex"
-        justifyContent="center"
-      >
-        <GridItem
-          colSpan={1}
-          style={{ backgroundColor: "secondary", border: "2px solid white" }}
-          display={{ base: "none", md: "flex" }}
+    <ContentLayout>
+      <VStack gap="3rem">
+        <Text textStyle="homePageWelcome">Welcome!</Text>
+        <Box
+          gap="2rem"
+          height="100%"
+          display="flex"
+          flexDir="column"
+          width={{
+            md: "sm",
+            lg: "md",
+          }}
         >
-          <Text p="8" textStyle="6xl" alignSelf="start">
-            Welcome ...
-          </Text>
-        </GridItem>
-        <GridItem
-          colSpan={3}
-          padding={10}
-          style={{ backgroundColor: "black", border: "2px solid white" }}
-        >
-          <Box
-            gap="12"
-			height="100%"
-			display="flex"
-			flexDir="column"
-			justifyContent="space-between"
-			width={{
-				md: "sm",
-				lg: "md",
-			}}
-          >
-            <Text textStyle="3xl">{welcomeText}</Text>
-            <Button onClick={()=>scrollToSection(PROJECT_OVERVIEW_ID)}>
-                <Text 
-                paddingX="8"
-                paddingY="3"
-                display="flex"
-                style={{
-                  backgroundColor: "black",
-                  border: "2px solid white",
-                  borderRadius: "0px",
-                }}
-				textStyle="2xl">More</Text>
-            </Button>
+          {welcomeTextList.map((x, index) => (
+            <Text
+              key={index}
+              textStyle="homePageWelcomeContent"
+              textAlign="center"
+            >
+              {x}
+            </Text>
+          ))}
+          <Box justifyContent="center" display="flex">
+            <PrimaryButton
+              label="More"
+              onClick={() => scrollToSection(PROJECT_OVERVIEW_ID)}
+            />
           </Box>
-        </GridItem>
-      </Grid>
+        </Box>
+      </VStack>
     </ContentLayout>
-  )
+  );
 }
