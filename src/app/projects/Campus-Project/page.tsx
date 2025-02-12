@@ -5,7 +5,6 @@ import {
   VStack,
   Box,
   Text,
-  Card,
   Image,
   Link,
 } from "@chakra-ui/react";
