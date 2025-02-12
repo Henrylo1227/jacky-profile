@@ -18,7 +18,7 @@ export const textStyles = defineTextStyles({
     value: {
       fontFamily: "sans-serif",
       fontWeight: "500",
-      fontSize: "2xl",
+      fontSize: "lg",
       lineHeight: "tall",
       letterSpacing: "2",
       textDecoration: "None",
