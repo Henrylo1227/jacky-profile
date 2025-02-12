@@ -1,16 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Button, Card, Link, HStack, IconButton, Text } from "@chakra-ui/react";
+import { Button, Card, Link, Image, HStack, IconButton, Text } from "@chakra-ui/react";
 import { Tag } from "../components/ui/tag";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-interface CardContent {
+export interface CardContent {
 	key: string
-	name: string  
 	imagePath: string
-	description: string
-	tagList: string[] 
-	projectPath: string
 }
 
 interface CarouselCardProps {
@@ -21,29 +17,14 @@ interface CarouselCardProps {
 const CarouselCard = ({ contentList, showIndex }: CarouselCardProps) => {
   const content = contentList[showIndex % contentList.length];
   return (
-    <Card.Root 
+    <Image
 		key={content.key} 
-		background="gold" 
-		width={{base: "80%"}}
-		height={{base: "70vh", md: "80vh"}}
+		alt={content.key}
+		src={content.imagePath}
+		width={{base: "60vw"}}
+		height={{base: "30vh", md: "40vh"}}
 		>
-      <Card.Header textStyle="2xl"> {content.name} </Card.Header>
-      <Card.Body>
-        <Text>{content.description}</Text>
-      </Card.Body>
-      <Card.Footer display="flex" width="100%" justifyContent="space-between">
-        <HStack>
-          {content.tagList.map((tag: string) => {
-            return <Tag key={tag}>{tag}</Tag>;
-          })}
-        </HStack>
-        <Button background="tan">
-          <Link href={content.projectPath} paddingX="2">
-            Learn More
-          </Link>
-        </Button>
-      </Card.Footer>
-    </Card.Root>
+    </Image>
   );
 };
 const settings = {

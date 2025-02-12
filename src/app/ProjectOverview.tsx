@@ -10,16 +10,16 @@ const contentList = [
   {
     key: "Creative Territories",
     name: "Creative Territories",
-    imagePath: IMAGE_PATH.CT_COVER,
+    imagePath: IMAGE_PATH.LARGE.CT_COVER,
     description: "Comming soon",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
-    projectPath: PROJECT_PATHS.CREATIVE_TERRITORIES,
+    projectPath: "",
 	enablePath: false,
   },
   {
     key: "HUD - Campus Project",
     name: "HUD - Campus Project",
-    imagePath: IMAGE_PATH.HUD_COVER,
+    imagePath: IMAGE_PATH.LARGE.HUD_COVER,
     description: "i am some description",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
     projectPath: PROJECT_PATHS.CAMPUS_PROJECT,
@@ -28,7 +28,7 @@ const contentList = [
   {
     key: "Culture of Hub",
     name: "Culture of Hub",
-    imagePath: IMAGE_PATH.COH_COVER,
+    imagePath: IMAGE_PATH.LARGE.HOD_COVER,
     description: "i am not some description",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
     projectPath: PROJECT_PATHS.CULTURE_OF_HUB,
@@ -64,6 +64,7 @@ export default function ProjectOverview() {
                 imagePath: x.imagePath,
                 projectPath: x.projectPath,
               }}
+			  enablePath={x.enablePath}
             ></WelcomeProjectCard>
           ))}
         </HStack>

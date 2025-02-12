@@ -34,7 +34,7 @@ export default function WelcomeProjectCard({
   enablePath,
 }: DescriptionProps) {
   style = style || DEFAULT_STYLE;
-  enablePath = enablePath || true;
+  enablePath = enablePath === undefined ? enablePath : true;
 
   return (
     <Card.Root id={dc.id} key={dc.id} bg={style.bgColor} width="sm" height="md">
@@ -48,7 +48,7 @@ export default function WelcomeProjectCard({
         >
           <LinkBox width="100%">
             <LinkOverlay asChild>
-              <NextLink href={dc.projectPath} />
+              <NextLink href={ enablePath ? dc.projectPath : ""} />
             </LinkOverlay>
             <VStack bg="grey/80" width="100%" gap="2px" justifyContent="center">
               <Text textStyle="homePageProjectTitle" color={style.titleColor}>

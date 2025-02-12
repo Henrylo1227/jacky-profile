@@ -86,6 +86,18 @@ export const textStyles = defineTextStyles({
       textTransform: "None",
     },
   },
+  projectPageContent: {
+    description: "project page project content",
+    value: {
+      fontFamily: "sans-serif",
+      fontWeight: "500",
+      fontSize: "xl",
+      lineHeight: "tall",
+      letterSpacing: "2",
+      textDecoration: "None",
+      textTransform: "None",
+    },
+  },
   projectPageTitle: {
     description: "project page project title",
     value: {

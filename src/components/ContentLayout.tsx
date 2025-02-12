@@ -4,6 +4,7 @@ import { Box } from "@chakra-ui/react";
 interface ContentLayoutInterface {
   children: ReactElement;
   background?: string;
+  backgroundImage?: string;
   height?: string;
 }
 
@@ -22,6 +23,10 @@ export default function ContentLayout(props: ContentLayoutInterface) {
 	  justifyContent="center"
       minHeight={props.height ? props.height : { base: "90vh", sm: "100vh" }}
       background={props.background ? props.background :DEFAULT_STYLE.background}
+	  bgImage={props.backgroundImage}
+	  bgRepeat="no-repeat"
+	  bgPos="center"
+	  bgBlendMode="cover"
 	  borderColor={DEFAULT_STYLE.borderColor}
 	  borderTopWidth={DEFAULT_STYLE.borderTopWidth}
     >
