@@ -56,6 +56,7 @@ const Carousel = ({contentList}: CarouselInterface) => {
   useEffect(() => {
     const timeoutId = setTimeout(nextIndex, settings.speed);
     return () => clearTimeout(timeoutId);
+// eslint-disable-next-line
   }, [showIndex]);
 
   return (
