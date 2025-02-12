@@ -1,6 +1,6 @@
 import React from "react";
 import { VStack, HStack, Text, List, Icon } from "@chakra-ui/react";
-import { FaYoutube, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 // configurations
 const footerText = "Jacky.L's Profile";

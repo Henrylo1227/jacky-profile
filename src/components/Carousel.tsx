@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Button, Card, Link, Image, HStack, IconButton, Text } from "@chakra-ui/react";
-import { Tag } from "../components/ui/tag";
+import { Image, HStack, IconButton } from "@chakra-ui/react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export interface CardContent {
