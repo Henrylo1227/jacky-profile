@@ -1,7 +1,6 @@
 import React from "react";
-import { HStack, Text, VStack } from "@chakra-ui/react";
+import { Link, Button, HStack, Text, VStack } from "@chakra-ui/react";
 import ContentLayout from "@components/ContentLayout";
-import PrimaryButton from "@components/PrimaryButton";
 
 const aboutContentList = [
   `
@@ -60,7 +59,23 @@ export default function About() {
               </Text>
             );
           })}
-          <PrimaryButton label={"CV"} />
+			<Button asChild
+				paddingX="2rem" 
+				paddingY="1.5rem"
+				background="tertiary"
+				borderColor="primary"
+				borderWidth="medium"
+				display="flex"
+				textStyle="button"
+			>
+              <Link
+                href={
+                  "https://firebasestorage.googleapis.com/v0/b/image-cdn-fb0d4.firebasestorage.app/o/jacky-profile-project%2Fcoh_doc%2FTsz%20Yip%20Jacky%20Lo-CV.pdf?alt=media&token=5ce69d1a-5db4-4c22-83c4-a90cb7a1f6d3"
+                }
+              >
+				Download CV 
+              </Link>
+			</Button>
         </VStack>
       </HStack>
     </ContentLayout>

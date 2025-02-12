@@ -10,7 +10,7 @@ const navbarTitle = "Jacky Lo's Portfolio";
 const navbarTitleShort = "Jacky";
 const navPageList = [
   { label: "Home", icon: <AiOutlineHome />, href: "/" },
-  { label: "Projects", icon: <LuFolderPen />, href: "/projects" },
+//  { label: "Projects", icon: <LuFolderPen />, href: "/projects" },
   { label: "About", icon: <FiInfo />, href: "/about" },
 ];
 

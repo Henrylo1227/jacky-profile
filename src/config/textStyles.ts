@@ -18,7 +18,7 @@ export const textStyles = defineTextStyles({
     value: {
       fontFamily: "sans-serif",
       fontWeight: "500",
-      fontSize: "2xl",
+      fontSize: "lg",
       lineHeight: "tall",
       letterSpacing: "2",
       textDecoration: "None",
@@ -80,6 +80,18 @@ export const textStyles = defineTextStyles({
       fontFamily: "Changa One",
       fontWeight: "400",
       fontSize: "md",
+      lineHeight: "tall",
+      letterSpacing: "2",
+      textDecoration: "None",
+      textTransform: "None",
+    },
+  },
+  projectPageContent: {
+    description: "project page project content",
+    value: {
+      fontFamily: "sans-serif",
+      fontWeight: "500",
+      fontSize: "xl",
       lineHeight: "tall",
       letterSpacing: "2",
       textDecoration: "None",
