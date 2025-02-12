@@ -41,6 +41,7 @@ const settings = {
 
 interface CarouselInterface {
 	contentList: CardContent[]
+	showIndex: number
 }
 
 const Carousel = ({contentList}: CarouselInterface) => {
