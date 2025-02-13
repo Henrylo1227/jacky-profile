@@ -72,6 +72,7 @@ export default function ProjectPageCOH() {
       </ContentLayout>
       <ContentLayout>
         <VStack gap="4rem" paddingY="3rem">
+		  <Text paddingY="2rem" maxWidth="40vw">{descriptions.BRIEF.content}</Text>
           <HStack display="flex" gap="2rem">
             <Image
               alt="chair"
@@ -113,7 +114,7 @@ export default function ProjectPageCOH() {
             >
               <Link
                 href={
-                  "https://firebasestorage.googleapis.com/v0/b/image-cdn-fb0d4.firebasestorage.app/o/jacky-profile-project%2Fcoh_doc%2F(5)%20AutoCAD_Detail%20DrawingTemplate(Culture)-A1_Cult_Plan%201%2B2.pdf?alt=media&token=2c5ce50b-5571-4b39-8b98-9d9957b03abb"
+                  "https://firebasestorage.googleapis.com/v0/b/image-cdn-fb0d4.firebasestorage.app/o/jacky-profile-project%2Fcoh_doc%2FHud-Campus%20Project%20Technical%20Drawing.pdf?alt=media&token=54e7cb09-4cdf-4ae2-89dc-e2907a8a46f6"
                 }
               >
                 Download Technical Drawing
