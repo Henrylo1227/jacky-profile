@@ -39,7 +39,7 @@ const SocialMediaGroup = () => {
 
 const Footer = () => {
   return (
-    <VStack as="footer" width="100%" background="primary">
+    <VStack as="footer" width="100%" color="white" background="primary">
       <HStack paddingTop="3">
         <Text textStyle="md" fontWeight="bolder">
           {footerText}

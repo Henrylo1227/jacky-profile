@@ -20,7 +20,7 @@ const contentList = [
     key: "HUD - Campus Project",
     name: "HUD - Campus Project",
     imagePath: IMAGE_PATH.LARGE.HUD_COVER,
-    description: "i am some description",
+    description: "",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
     projectPath: PROJECT_PATHS.CAMPUS_PROJECT,
 	enablePath: true,
@@ -29,7 +29,7 @@ const contentList = [
     key: "Culture of Hub",
     name: "Culture of Hub",
     imagePath: IMAGE_PATH.LARGE.HOD_COVER,
-    description: "i am not some description",
+    description: "",
     tagList: ["tag1", "tag2", "tag3", "tag4"],
     projectPath: PROJECT_PATHS.CULTURE_OF_HUB,
 	enablePath: true,
@@ -48,7 +48,7 @@ export default function ProjectOverview() {
         <Text
           display="flex"
           p={{ base: "4", md: "5", lg: "8" }}
-          textStyle="5xl"
+          textStyle="homePageProject"
           alignSelf="center"
         >
           Projects
