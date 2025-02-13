@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Button, Card, Link, Image, HStack, IconButton, Text } from "@chakra-ui/react";
-import { Tag } from "../components/ui/tag";
+import { Image, HStack, IconButton } from "@chakra-ui/react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export interface CardContent {
@@ -42,6 +41,7 @@ const settings = {
 
 interface CarouselInterface {
 	contentList: CardContent[]
+	showIndex: number
 }
 
 const Carousel = ({contentList}: CarouselInterface) => {
@@ -57,6 +57,7 @@ const Carousel = ({contentList}: CarouselInterface) => {
   useEffect(() => {
     const timeoutId = setTimeout(nextIndex, settings.speed);
     return () => clearTimeout(timeoutId);
+// eslint-disable-next-line
   }, [showIndex]);
 
   return (

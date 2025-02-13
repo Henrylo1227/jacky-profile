@@ -3,7 +3,6 @@ import { Box, Text, Button, IconButton, Link } from "@chakra-ui/react";
 import { List } from "@chakra-ui/react";
 import { AiOutlineHome } from "react-icons/ai";
 import { FiInfo } from "react-icons/fi";
-import { LuFolderPen } from "react-icons/lu";
 
 // configurations
 const navbarTitle = "Jacky Lo's Portfolio";
