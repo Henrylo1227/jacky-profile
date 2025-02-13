@@ -54,6 +54,7 @@ export default function Navbar() {
       position="fixed"
       justifyContent="space-between"
 	  textStyle="navbar"
+	  color="white"
       alignItems="center"
     >
       <Link

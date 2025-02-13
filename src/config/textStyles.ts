@@ -38,6 +38,19 @@ export const textStyles = defineTextStyles({
       textTransform: "None",
     },
   },
+  homePageProject: {
+    description: "home page project",
+    value: {
+      fontFamily: "Changa One",
+      fontWeight: "400",
+      fontSize: "4xl",
+      fontStyle: "normal",
+      lineHeight: "taller",
+      letterSpacing: "4",
+      textDecoration: "None",
+      textTransform: "None",
+    },
+  },
   homePageWelcomeContent: {
     description: "home page welcome",
     value: {
@@ -102,8 +115,8 @@ export const textStyles = defineTextStyles({
     description: "project page project title",
     value: {
       fontFamily: "sans-serif",
-      fontWeight: "500",
-      fontSize: "3xl",
+      fontWeight: "900",
+      fontSize: "4xl",
       lineHeight: "tall",
       letterSpacing: "2",
       textDecoration: "None",

@@ -1,5 +1,14 @@
 import React from "react";
-import { Button, HStack, VStack, Box, Text, Card, Image, Link } from "@chakra-ui/react";
+import {
+  Button,
+  HStack,
+  VStack,
+  Box,
+  Text,
+  Card,
+  Image,
+  Link,
+} from "@chakra-ui/react";
 import { DescriptionContent } from "@components/DescriptionCard";
 import ContentLayout from "@components/ContentLayout";
 import IMAGE_PATH from "../../../../public/images/imagesPaths";
@@ -11,21 +20,21 @@ const descriptions: { [key: string]: DescriptionContent } = {
     title: "Project Brief",
     subtitle: "the bref description of the Culture of Hub project",
     content:
-      "A flexiable and adaptable 'furnitecture' piece which nurture community enagament as a welcoming hub.",
+      "Design a flexible and adaptable ‘furnitecture’ piece that serves as a welcoming hub for community engagement by the Cultures of Team.",
   },
   CONCEPT: {
     id: "culture of hub - concept",
     title: "Project Concept",
     subtitle: "the project concept of the Culture of Hub project",
     content:
-      "Honeycomb symobized the ecoogy, demonstrating the core and connection of the nature.",
+      "Symbolizing the ecology by Honeycomb to show the core and connection the nature.",
   },
   INTENSION: {
     id: "culture of hub - intension",
     title: "Why Honeycomb?",
     subtitle: "the insperation of chooing Honeycomb as design concept",
     content:
-      "Bees are important! Bees pay a significant role in pollinating 15% of the world's crops, supporting plant reproduction and boidiversity. Symboling the tangled ecosystem on Earth.",
+      "Reason of selecting “Honeycomb” mportance of pollination: Bees play a role in pollinating 75% of the world’s crops, supporting plant reproduction and biodiversity， representing the interconnectedness of ecosystems",
   },
   CHAIR_DESCRIPTION: {
     id: "culture of hub - chair / table",
@@ -169,7 +178,14 @@ export default function ProjectPageCOH() {
               src={IMAGE_PATH.MEDIUM.COH_CHAIR}
             />
             <VStack gap="1rem">
-              <Card.Root alignSelf="start" maxWidth="300px" opacity="0.8">
+              <Card.Root
+                maxWidth="20rem"
+                bg="negator"
+                color="white"
+                opacity="0.8"
+                shadow="lg"
+                shadowColor="black"
+              >
                 <Card.Header>
                   <Card.Title textStyle="projectPageContent" color="white">
                     <Text>{descriptions.CHAIR_DESCRIPTION.title}</Text>
@@ -215,41 +231,43 @@ export default function ProjectPageCOH() {
                 src={IMAGE_PATH.MEDIUM.COH_JOINT_3}
               />
             </HStack>
-            <VStack >
-			<Button asChild 
-				paddingX="2rem" 
-				paddingY="1.5rem"
-				background="tertiary"
-				borderColor="primary"
-				borderWidth="medium"
-				display="flex"
-				textStyle="button"
-			>
-              <Link
-                href={
-                  "https://firebasestorage.googleapis.com/v0/b/image-cdn-fb0d4.firebasestorage.app/o/jacky-profile-project%2Fcoh_doc%2F(4)%20A3%20Presentation.pdf?alt=media&token=890b3594-2a76-4dcb-852b-655755d31fe6"
-                }
+            <VStack>
+              <Button
+                asChild
+                paddingX="2rem"
+                paddingY="1.5rem"
+                background="tertiary"
+                borderColor="primary"
+                borderWidth="medium"
+                display="flex"
+                textStyle="button"
               >
-				Download A3 Presentation
-              </Link>
-			</Button>
-			<Button asChild
-				paddingX="2rem" 
-				paddingY="1.5rem"
-				background="tertiary"
-				borderColor="primary"
-				borderWidth="medium"
-				display="flex"
-				textStyle="button"
-			>
-              <Link
-                href={
-                  "https://firebasestorage.googleapis.com/v0/b/image-cdn-fb0d4.firebasestorage.app/o/jacky-profile-project%2Fcoh_doc%2F(5)%20AutoCAD_Detail%20DrawingTemplate(Culture)-A1_Cult_Plan%201%2B2.pdf?alt=media&token=2c5ce50b-5571-4b39-8b98-9d9957b03abb"
-                }
+                <Link
+                  href={
+                    "https://firebasestorage.googleapis.com/v0/b/image-cdn-fb0d4.firebasestorage.app/o/jacky-profile-project%2Fcoh_doc%2F(4)%20A3%20Presentation.pdf?alt=media&token=890b3594-2a76-4dcb-852b-655755d31fe6"
+                  }
+                >
+                  Download A3 Presentation
+                </Link>
+              </Button>
+              <Button
+                asChild
+                paddingX="2rem"
+                paddingY="1.5rem"
+                background="tertiary"
+                borderColor="primary"
+                borderWidth="medium"
+                display="flex"
+                textStyle="button"
               >
-                Download Technical Drawing
-              </Link>
-			</Button>
+                <Link
+                  href={
+                    "https://firebasestorage.googleapis.com/v0/b/image-cdn-fb0d4.firebasestorage.app/o/jacky-profile-project%2Fcoh_doc%2F(5)%20AutoCAD_Detail%20DrawingTemplate(Culture)-A1_Cult_Plan%201%2B2.pdf?alt=media&token=2c5ce50b-5571-4b39-8b98-9d9957b03abb"
+                  }
+                >
+                  Download Technical Drawing
+                </Link>
+              </Button>
             </VStack>
           </VStack>
         </VStack>

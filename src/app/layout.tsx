@@ -40,9 +40,9 @@ export default function RootLayout({
       >
         <Provider>
           <Navbar />
-          <Box height="5vh" background="black" />
+          <Box height="5vh" background="black" color="white" />
           {children}
-          <Footer />{" "}
+          <Footer />
         </Provider>
       </body>
     </html>
